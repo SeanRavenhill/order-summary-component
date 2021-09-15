@@ -1,6 +1,7 @@
 /* Google Fonts Import*/
 @import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@400;500;700;900&display=swap');
-/* Style Guide Custom Properties */
+
+/* Style Guide & Custom Properties */
 :root {
     font-size: 16px;
     --ff-primary: 'Red Hat Display', sans-serif;
@@ -18,8 +19,6 @@
     --clr-active-state: hsl(245, 83%, 68%);
         --clr-active-state-opacity: hsla(245, 83%, 68%, 35%);
     --fs-h1: 1.375rem;
-    --fs-h2: 2.25rem;
-    --fs-h3: 1.25rem;
     --fs-body: 1rem;
 }
 
@@ -32,17 +31,23 @@ body {
 }
 
 /* Initialization, Normalization */
-
 * {
     box-sizing: border-box;
+}
+
+html {
+    background: url("../images/pattern-background-desktop.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: var(--clr-primary-pale-blue);
 }
 
 html, body {
     margin: 0;
     padding: 0;
     font-family: var(--ff-primary);
-    background-color: var(--clr-primary-pale-blue);
     font-size: var(--fs-body);
+
 }
 
 img {
@@ -57,7 +62,6 @@ a {
 }
 
 /* Typography */
-
 h1 {
     color: var(--clr-neutral-dark-blue);
     font-size: var(--fs-h1);
@@ -66,14 +70,11 @@ h1 {
 
 p {
     color: var(--clr-neutral-desaturated-blue);
-    font-size: var(--fs-body);
     font-weight: var(--fw-reg);
 }
 
 .plan-info,
-.plan-info p,
-.plan-info a {
-    font-size: 0.875rem;
+.plan-info p {
     text-align: left;
 }
 
@@ -86,9 +87,26 @@ p {
     font-weight: var(--fw-bold);
 }
 
+.plan-info a {
+    text-align: right;
+}
+
+.plan-info-change-link {
+    color: var(--clr-active-state);
+    font-weight: var(--fw-bold)
+}
+
+.plan-info-change-link:hover,
+.plan-info-change-link:focus {
+    color: var(--clr-neutral-dark-blue);
+}
+
+.plan-info-text {
+    margin-left: -1rem;
+}
+
 /* Layout */
 .container {
-    /* border: 1px red solid; */
     margin: 0 auto;
 }
 
@@ -100,7 +118,7 @@ p {
     max-width: 325px;
     border-radius: 20px;
     margin-bottom: 1.25rem;
-    filter: drop-shadow(0px 10px 10px rgba(0, 0, 0, 0.1)); */
+    filter: drop-shadow(0px 10px 10px rgba(0, 0, 0, 0.1));
 }
 
 .card-header {
@@ -134,19 +152,6 @@ p {
     margin-bottom: 1.5rem;
 }
 
-.plan-info-text{
-    margin-left: -3.25rem;
-}
-
-.plan-info-change-link {
-    color: var(--clr-active-state);
-}
-
-.plan-info-change-link:hover,
-.plan-info-change-link:focus {
-    color: var(--clr-neutral-dark-blue);
-}
-
 .btn {
     width: 100%;
     border: none;
@@ -155,12 +160,10 @@ p {
     cursor: pointer;
     font-weight: var(--fw-bold);
     letter-spacing: .3px;
-    font-size: 0.875rem;
     margin-bottom: 1rem;
 }
 
 .pay-btn {
-
     color: hsl(0 , 0%,100%);
     background-color: var(--clr-primary-bright-blue);
     filter: drop-shadow(0px 10px 10px var(--clr-primary-bright-blue-opacity));
@@ -185,12 +188,38 @@ p {
 }
 
 /* media queries */
-@media (min-width: 375px) {
+@media (min-width: 380px) {
+    .html {
+        background: url("../images/pattern-background-mobile.svg");
+    }
+    .card {
+        max-width: 450px;
+    }
 
+    .card-info {
+        padding: 0 3rem;
+    }
+
+    .plan-info {
+        padding: 1.4375rem;
+    }
+
+    .plan-info-text{
+        margin-left: -5rem;
+    }
 }
-
 
 /* Frontend Mentor | attribution */
 
-.attribution { font-size: 11px; text-align: center; }
-.attribution a { color: hsl(228, 45%, 44%); }
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+.attribution span {
+    margin: 0 0 0 .25rem;
+}
