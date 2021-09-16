@@ -152,6 +152,14 @@ p {
     margin-bottom: 1.5rem;
 }
 
+.plan-info-text span {
+    display: block;
+}
+
+.plan-info-text span:last-child {
+    font-weight: var(--fw-reg);
+}
+
 .btn {
     width: 100%;
     border: none;
