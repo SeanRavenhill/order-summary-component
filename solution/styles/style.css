@@ -3,7 +3,7 @@
 
 /* Style Guide & Custom Properties */
 :root {
-    font-size: 16px;
+    font-size: 10px;
     --ff-primary: 'Red Hat Display', sans-serif;
     --fw-reg: 400;
     --fw-med: 500;
@@ -18,8 +18,8 @@
     --clr-neutral-dark-blue: hsl(223, 47%, 23%);
     --clr-active-state: hsl(245, 83%, 68%);
         --clr-active-state-opacity: hsla(245, 83%, 68%, 35%);
-    --fs-h1: 1.375rem;
-    --fs-body: 1rem;
+    --fs-h1: 2.2rem;
+    --fs-body: 1.6rem;
 }
 
 /* Showcase Body (Centers Card to Page) */
@@ -73,36 +73,16 @@ p {
     font-weight: var(--fw-reg);
 }
 
-.plan-info,
-.plan-info p {
-    text-align: left;
-}
-
-.plan-info p {
-    line-height: 1.5;
-}
-
-.plan-info span {
-    color: var(--clr-neutral-dark-blue);
+.card-plan__change-link {
+    color: var(--clr-primary-bright-blue);
     font-weight: var(--fw-bold);
-}
-
-.plan-info a {
     text-align: right;
-}
+} 
 
-.plan-info-change-link {
+.card-plan__change-link:hover,
+.card-plan__change-link:focus {
     color: var(--clr-active-state);
-    font-weight: var(--fw-bold)
-}
-
-.plan-info-change-link:hover,
-.plan-info-change-link:focus {
-    color: var(--clr-neutral-dark-blue);
-}
-
-.plan-info-text {
-    margin-left: -1rem;
+    text-decoration: none;
 }
 
 /* Layout */
@@ -117,7 +97,7 @@ p {
     background-color: hsl(0 , 0%,100%);
     max-width: 325px;
     border-radius: 20px;
-    margin-bottom: 1.25rem;
+    margin-bottom: 2rem;
     filter: drop-shadow(0px 10px 10px rgba(0, 0, 0, 0.1));
 }
 
@@ -128,68 +108,74 @@ p {
 
 .card-info {
     text-align: center;
-    padding: 0 1.5rem;
-    margin-top: 2.375rem;
+    padding: 0 2.4rem;
+    margin-top: 3.8rem;
 }
 
-.card-info-header {
-    margin-bottom: 1.875rem;
+.card-info__header {
+    margin-bottom: 3rem;
 }
 
-.card-info-text {
-    margin-bottom: 1.875rem;
+.card-info__text {
+    margin-bottom: 3rem;
     line-height: 1.5;
     letter-spacing: 0.3px;
 }
 
-.plan-info {
+.card-plan {
     display: flex;
     align-items: center;
     justify-content: space-between;
     background-color: var(--clr-neutral-very-pale-blue);
     border-radius: 10px;
-    padding: 1rem;
-    margin-bottom: 1.5rem;
+    padding: 1.6rem;
+    margin-bottom: 2.4rem;
 }
 
-.plan-info-text span {
-    display: block;
+.card-plan__info {
+    margin-left: -8rem;
+    text-align: left;
 }
 
-.plan-info-text span:last-child {
-    font-weight: var(--fw-reg);
+.card-plan__text--bold {
+    font-weight: var(--fw-black);
+    color: var(--clr-neutral-dark-blue);
+}
+
+.card-plan__text--btm-margin {
+    margin-bottom: .5rem;
 }
 
 .btn {
     width: 100%;
     border: none;
     border-radius: 10px;
-    padding: 1em;
+    padding: 1.6em;
     cursor: pointer;
     font-weight: var(--fw-bold);
     letter-spacing: .3px;
-    margin-bottom: 1rem;
+    margin-bottom: 1.6rem;
 }
 
-.pay-btn {
+.btn--pay {
     color: hsl(0 , 0%,100%);
     background-color: var(--clr-primary-bright-blue);
     filter: drop-shadow(0px 10px 10px var(--clr-primary-bright-blue-opacity));
 }
 
-.pay-btn:hover,
-.pay-btn:focus {
+.btn--pay:hover,
+.btn--pay:focus {
     background-color: var(--clr-active-state);
     filter: drop-shadow(0px 10px 10px var(--clr-active-state-opacity));
 }
 
-.cancel-btn {
+.btn--cancel {
     background-color: hsl(0 , 0%,100%);
     color: var(--clr-neutral-desaturated-blue);
 }
 
-.cancel-btn:hover,
-.cancel-btn:focus {
+.btn--cancel:hover,
+.btn--cancel:focus {
     color: hsl(0 , 0%,100%);
     background-color: var(--clr-neutral-desaturated-blue);
     filter: drop-shadow(0px 05px 10px var(--clr-neutral-desaturated-blue-opacity));
@@ -205,15 +191,15 @@ p {
     }
 
     .card-info {
-        padding: 0 3rem;
+        padding: 0 4.8rem;
     }
 
     .plan-info {
-        padding: 1.4375rem;
+        padding: 2.3rem;
     }
 
     .plan-info-text{
-        margin-left: -5rem;
+        margin-left: -8rem;
     }
 }
 
@@ -224,10 +210,6 @@ p {
     text-align: center;
 }
 
-.attribution a {
+.attribution__link {
     color: hsl(228, 45%, 44%);
-}
-
-.attribution span {
-    margin: 0 0 0 .25rem;
 }

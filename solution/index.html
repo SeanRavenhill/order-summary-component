@@ -1,41 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="author" content="Sean Ravenhill" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css"
+		/>
+		<link rel="stylesheet" href="styles/style.css" />
+		<title>Frontend Mentor | Order summary card</title>
+	</head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="author" content="Sean Ravenhill">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
-    <link rel="stylesheet" href="styles/style.css">
-    <title>Frontend Mentor | Order summary card</title>
-</head>
+	<body>
+		<main>
+			<div class="container">
+				<div class="card">
+					<div class="card-header">
+						<img
+							class="card-header__image"
+							src="images/illustration-hero.svg"
+							alt="Illustration of young smiling woman listening to music on her smart phone"
+						/>
+					</div>
 
-<body>
-    <main>
-        <div class="container">
-            <div class="card">
-                <div class="card-header">
-                    <img src="images/illustration-hero.svg" alt="Illustration of young smiling woman listening to music on her smart phone" />
-                </div> <!-- card-header -->
-                <div class="card-info">
-                    <h1 class="card-info-header">Order Summary</h1>
-                    <p class="card-info-text">You can now listen to millions of songs, audiobooks, and podcasts on any device anywhere you like!</p>
-                    <div class="plan-info">
-                        <img src="images/icon-music.svg" alt="music icon" />
-                        <p class="plan-info-text"><span>Annual Plan</span><span>$59.99/year</span></p>
-                        <a class="plan-info-change-link" href="#">Change</a>
-                    </div> <!-- plan-info -->
-                    <button class="btn pay-btn">Proceed to Payment</button>
-                    <button class="btn cancel-btn">Cancel Order</button>
-                </div><!-- card-info -->
-            </div> <!-- card -->
-            <div class="attribution">
-                Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-                &nbsp;
-                Coded by <a href="https://github.com/SeanRavenhill" target="_blank">Sean Ravenhill</a>.
-            </div> <!-- attribution -->
-        </div> <!-- container -->
-    </main>
-</body>
+					<div class="card-info">
+						<h1 class="card-info__header">Order Summary</h1>
+						<p class="card-info__text">
+							You can now listen to millions of songs, audiobooks, and podcasts on any
+							device anywhere you like!
+						</p>
+						<div class="card-plan">
+							<img
+								class="card-plan__image"
+								src="images/icon-music.svg"
+								alt="music icon"
+							/>
+							<div class="card-plan__info">
+								<p class="card-plan__text card-plan__text--bold card-plan__text--btm-margin">Annual Plan</p>
+								<p class="card-plan__text">$59.99/year</p>
+							</div>
+							<a class="card-plan__change-link" href="#">Change</a>
+						</div>
 
+						<button class="btn btn--pay">Proceed to Payment</button>
+						<button class="btn btn--cancel">Cancel Order</button>
+					</div>
+				</div>
+
+				<div class="attribution">
+					Challenge by
+					<a
+						class="attribution__link"
+						href="https://www.frontendmentor.io?ref=challenge"
+						target="_blank"
+						>Frontend Mentor</a
+					>. &nbsp; Coded by
+					<a
+						class="attribution__link"
+						href="https://github.com/SeanRavenhill"
+						target="_blank"
+						>Sean Ravenhill</a
+					>.
+				</div>
+			</div>
+		</main>
+	</body>
 </html>
